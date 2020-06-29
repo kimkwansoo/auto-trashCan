@@ -1,4 +1,4 @@
-// gonasoo 쓰레기통 만들기
+// gonasoo 쓰레기통 만들기  20200629 수정
 #include <Servo.h>      // 서보 라이브러리 사용
 
 Servo trash;            //trash 라는 이름의 서보 선언
@@ -24,7 +24,7 @@ void loop() {
   delayMicroseconds(10);
   digitalWrite(trig, LOW);
   duration = pulseIn(echo, HIGH);
-  distance = 58/duration;            //cm 환산
+  distance = duration/58;            //cm 환산
   Serial.println(distance);
   //////////////////////////////////////////
   if(distance <= 6){
