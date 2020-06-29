@@ -24,7 +24,7 @@ void loop() {
   delayMicroseconds(10);
   digitalWrite(trig, LOW);
   duration = pulseIn(echo, HIGH);
-  distance = 58/duration;            //cm 환산
+  distance = duration/58;            //cm 환산
   Serial.println(distance);
   //////////////////////////////////////////
   if(distance <= 6){
